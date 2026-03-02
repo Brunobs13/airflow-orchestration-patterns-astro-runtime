@@ -1,0 +1,19 @@
+airflow:
+  connections:
+    - conn_id: http_default
+      conn_type: http
+      conn_host: https://api.example.com
+      conn_schema:
+      conn_login:
+      conn_password:
+      conn_port:
+      conn_extra: {}
+
+  pools:
+    - pool_name: default_ingestion_pool
+      pool_slot: 8
+      pool_description: Default ingestion pool for local development
+
+  variables:
+    - variable_name: environment
+      variable_value: local
